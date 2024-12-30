@@ -1,0 +1,26 @@
+<div class="centered-div">
+    <div class="weather-search">
+      <form (ngSubmit)="fetchWeather()">
+        <input type="text" class="form-control" [formControl]="city" placeholder="City..">
+        <p *ngIf="city.touched && (city.invalid || apiErrorMessage)">{{getErrorMessage()}}</p>
+        <div *ngIf="apiErrorMessage" class="error-message">
+          {{ apiErrorMessage }}
+        </div>
+        <button type="submit" class="btn btn-primary" (click)="fetchWeather()">Get Weather</button>
+      </form>
+    </div>
+    <div *ngIf="weatherData" class="weather-details" [style.backgroundImage]="backgroundImage" [ngClass]="{ 'sunny-theme': isSunny }">
+      <div class="weather-left">
+        <h1 class="city-name">{{ weatherData.name }}</h1>
+        <p class="temperature">{{ weatherData.main.temp }} °C</p>
+        <img [src]="weatherIcon" alt="Weather Icon" class="weather-icon" />
+      </div>
+      <div class="weather-right">
+        <p><strong>Feels Like:</strong> {{ weatherData.main.feels_like }} °C</p>
+        <p><strong>Humidity:</strong> {{ weatherData.main.humidity }} %</p>
+        <p><strong>Pressure:</strong> {{ weatherData.main.pressure }} hPa</p>
+        <p><strong>Wind Speed:</strong> {{ weatherData.wind.speed }} m/s</p>
+        <p><strong>Condition:</strong> {{ weatherData.weather[0].description | titlecase}}</p>
+      </div>
+    </div>
+</div>

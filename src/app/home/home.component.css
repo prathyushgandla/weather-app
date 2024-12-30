@@ -1,0 +1,92 @@
+.centered-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-image: url(/home.jpg); /* Replace with your image path */
+    background-size: cover;
+    gap: 10px;
+  }
+.form-control{
+    margin-bottom: 10px;
+    border-radius: 20px;
+    width: 300px;
+    height: 53px;
+}
+.btn{
+    width: 150px;
+    border-radius: 10px;
+    height: 43px;
+}
+.weather-details{
+    display: flex;
+    align-items: flex-start; /* Align items at the top */
+    justify-content: space-between;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    max-width: 50%;
+    width: 40%;
+    height: 40%;
+    margin: 20px auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    float: left;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+    
+}
+.weather-details p {
+    margin: 5px 0;
+    font-size: 1.2rem;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7);
+}
+.weather-right {
+    flex: 1;
+    text-align: left;
+    padding-left: 50px;
+    padding-top: 20px;
+    float: left;
+}
+.weather-left {
+    flex: 1;
+    text-align: left;
+}
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+}
+.error-message {
+    color: #e74c3c;
+    background-color: #fceae9;
+    padding: 10px;
+    margin-top: 10px;
+    border: 1px solid #e74c3c;
+    border-radius: 4px;
+    font-size: 0.875rem;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+.form-control.ng-touched.ng-invalid {
+    border-color: red;
+}
+  
+.form-control.ng-valid {
+    border-color: green;
+}
+.sunny-theme p{
+    /* background: url('path/to/sunny-background.jpg') no-repeat center center;
+    background-size: cover; */
+    color: black; /* Text color for sunny weather */
+    text-shadow: 1px 1px 5px rgba(2, 47, 47, 0.7);
+}
+.sunny-theme h1{
+    /* background: url('path/to/sunny-background.jpg') no-repeat center center;
+    background-size: cover; */
+    color: black; /* Text color for sunny weather */
+    text-shadow: 1px 1px 5px rgba(52, 47, 47, 0.7);
+  }
